@@ -33,3 +33,25 @@ for (let index = 0; index < slides.length; index++) {
 // ${index === 0 ? 'active' : ""}
 // se index è uguale a 0 ? allora aggiungi "active"
 // : altrimenti "" (non aggiungere niente)
+
+
+// selezionare pulsati precedente e prossimo
+
+const before_top = document.querySelector(".before_top")
+console.log(before_top);
+const next_bot = document.querySelector(".next_bot")
+console.log(next_bot);
+
+//creo evento al click del bottone next_bot
+
+next_bot.addEventListener("click", function(){
+    // 
+    console.log("hello") ;
+})
+
+//creo evento al click del bottone before_top
+
+before_top.addEventListener("click", function(){
+    // 
+    console.log("hello") ;
+})
