@@ -25,7 +25,7 @@ for (let index = 0; index < slides.length; index++) {
     const slideLink = slides[index];
     console.log(slideLink);
     const slideHtml =
-    ` <img class="${index === immagineAttiva ? 'active ' + 'img-fluid' : 'hide'}" src="${slideLink}" alt=""> ` 
+    ` <img class="${index === immagineAttiva ? 'active' : ''}" src="${slideLink}" alt=""> ` 
     console.log(slideHtml);
     slidesElement.insertAdjacentHTML("beforeend", slideHtml)
 }
@@ -48,22 +48,33 @@ console.log(next_bot);
 
 next_bot.addEventListener("click", function() {
     console.log("prossima img");
-    
-    const slideImgs = document.querySelectorAll(".slides > img");
+    const slides = document.querySelectorAll(".slides > img");
     const slideCorrente = slides[immagineAttiva];
-    // aggingo la classe hide
-    // non funziona
-
+    // rimuovo classe "active"
+    slideCorrente.classList.remove("active")
     // incremento immagine attiva
     immagineAttiva++
     // seleziono seconda immagine
-    let prossimaSlide = slides[immagineAttiva];
+    const prossimaSlide = slides[immagineAttiva];
     console.log(prossimaSlide);
+    // aggiungo classe attiva
+    prossimaSlide.classList.add("active")
 })
 
 //creo evento al click del bottone before_top
 
 before_top.addEventListener("click", function(){
     // 
-    console.log("hello") ;
+    console.log(" img precedente");
+    const slides = document.querySelectorAll(".slides > img");
+    const slideCorrente = slides[immagineAttiva];
+    // rimuovo classe "active"
+    slideCorrente.classList.remove("active")
+    // incremento immagine attiva
+    immagineAttiva--
+    // seleziono seconda immagine
+    const prossimaSlide = slides[immagineAttiva];
+    console.log(prossimaSlide);
+    // aggiungo classe attiva
+    prossimaSlide.classList.add("active")
 })

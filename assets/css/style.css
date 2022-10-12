@@ -4,6 +4,11 @@
     padding: 0;
 }
 
-.hide{
+.active{
+    display: block;
+}
+
+img{
+    max-width: 100%;
     display: none;
 }
