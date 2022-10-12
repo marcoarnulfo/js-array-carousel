@@ -44,9 +44,21 @@ console.log(next_bot);
 
 //creo evento al click del bottone next_bot
 
-next_bot.addEventListener("click", function(){
-    // 
-    console.log("hello") ;
+
+
+next_bot.addEventListener("click", function() {
+    console.log("prossima img");
+    
+    const slideImgs = document.querySelectorAll(".slides > img");
+    const slideCorrente = slides[immagineAttiva];
+    // aggingo la classe hide
+    // non funziona
+
+    // incremento immagine attiva
+    immagineAttiva++
+    // seleziono seconda immagine
+    let prossimaSlide = slides[immagineAttiva];
+    console.log(prossimaSlide);
 })
 
 //creo evento al click del bottone before_top
