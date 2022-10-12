@@ -67,19 +67,7 @@ next_bot.addEventListener("click", function () {
     let prossimaSlide = slides[immagineAttiva]; // slide numero 1
     console.log(prossimaSlide, immagineAttiva);
     // aggiungo classe attiva
-    /* test loop
-    if (prossimaSlide === undefined) {
-        prossimaSlide = slides[0]
-        console.log(slides);
-        prossimaSlide = slideCorrente
-        console.log(slideCorrente);
-        console.log("sono dentro if");
-        prossimaSlide.classList.remove("active")
-        immagineAttiva++
-        prossimaSlide = slides[immagineAttiva];
-        prossimaSlide.classList.add("active")
-    }
-    */
+
     prossimaSlide.classList.add("active")
 })
 //creo evento al click del bottone before_top
